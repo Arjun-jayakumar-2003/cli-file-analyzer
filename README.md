@@ -1,52 +1,25 @@
 # CLI File Analyzer
 
-A simple command-line tool written in Python that analyzes files in a directory.
+A command-line tool written in Python that analyzes files in a directory by counting files, calculating total size, identifying the largest file, and grouping files by extension.
+
 
 ## Features
 
-- Counts total number of files
-- Calculates total size of all files
-- Identifies the largest file
-- Groups files by extension
+- Counts the total number of files in a directory  
+- Calculates the combined size of all files  
+- Identifies the largest file by size  
+- Groups files based on their extensions  
+- Handles invalid paths and permission errors gracefully
+
 
 ## How It Works
 
-The program takes a directory path as input and:
-- Lists all files in the directory
-- Calculates their sizes
-- Categorizes them based on extensions
+The program accepts a directory path from the user and performs the following steps:
 
-## Usage
-
-Run the script:
-
-python3 main.py
-
-Then enter a path when prompted.
-
-Press Enter to analyze the current directory.
-
-## Example Output
-
-Number of Files: 10
-
-Total Size: 2.35 MB
-
-Largest File By Size: example.txt : 1.20 MB
-
-Number of Files By Extension
-
-.txt -> 5 files  
-.py -> 3 files  
-no_extensions -> 2 files
-
-## Technologies Used
-
-- Python
-- pathlib
-- os
-- collections
-
-## Author
-
-Arjun Jayakumar
+- Resolves the given path to an absolute path  
+- Validates whether the path exists and is a directory  
+- Iterates through all files in the directory (excluding subdirectories)  
+- Calculates the size of each file  
+- Tracks the largest file  
+- Groups files by their extensions  
+- Displays the results in a formatted output  
